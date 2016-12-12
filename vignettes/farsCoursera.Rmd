@@ -1,0 +1,29 @@
+---
+title: "Playing with the FARS data"
+author: "J. Kim"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Playing with the FARS data}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+```{r, include = FALSE}
+source("./R/fars_functions.R")
+```
+
+## Introduction
+This package is designed to read data from the
+[Fatality Analysis Reporting System](http://www.nhtsa.gov/Data/Fatality-Analysis-Reporting-System-(FARS)),
+summarize the data, and map the locations of accidents.
+
+## Data Import
+Once you have downloaded data files in a current working directory, `fars_read_years()` imports the data into the global environment. To show you
+how it works, let's assume that we already have downloaded data file of 2013,
+2014, and 2015. You just need to input a vector of years; then, this function
+internally generates appropriate file names. So you don't need to be concerned
+about a file name.
+
+```{r "fars_read_years()"}
+fars_read_years(c(2013, 2014, 2015))
+```
