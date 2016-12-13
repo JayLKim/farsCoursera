@@ -4,10 +4,71 @@ output: github_document
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-```{r, echo = FALSE}
+```{r, echo = FALSE, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
   fig.path = "README-"
 )
+library(farsCoursera)
+library(maps)
+file_list <- list.files(system.file("extdata", package = "farsCoursera"))
+from <- lapply(file_list, function(f) {
+    file.path(system.file("extdata", package = "farsCoursera"), f)
+})
+to <- getwd()
+lapply(from, function(f) {
+    file.copy(f, to)
+})
 ```
+
+# farsCoursera
+
+
+## Overview
+
+This package allow you to import and summarize data from the
+[Fatality Analysis Reporting System](http://www.nhtsa.gov/Data/Fatality-Analysis-Reporting-System-(FARS)).
+You can also map the locations of accidents on a state map.
+
+## Installation
+
+You can install this package directly from GitHub.
+
+```{r, eval = FALSE}
+install.packages("devtools")
+devtools::install_github("JayLKim/farsCoursera")
+```
+
+## Usage
+
+** We need to assume that we already have downloaded a data file at the current working directory. **
+
+* Data import (`fars_read_years()`)
+
+If you input a vector of years, you can get a `tibble` of all cases.
+
+```{r "fars_read_years()"}
+fars_read_years(c(2013, 2014))
+```
+
+* Data summary (`fars_summarize_years()`)
+
+This function summarizes the data you imported. It returns a `tibble`
+representing the number of cases per month for a given year.
+
+```{r "fars_summarize_years()"}
+fars_summarize_years(c(2013, 2014, 2015))
+```
+
+* Accidents map (`fars_map_state()`)
+
+You can map the locations of accidents on a state map. Let's draw an accident
+map of Florida in 2013.
+(See [this link](https://en.wikipedia.org/wiki/List_of_U.S._state_abbreviations)
+for a `state.num`)
+
+```{r "fars_map_state()", fig.height=6, fig.width=6}
+fars_map_state(state.num = 12, year = 2013)
+```
+
