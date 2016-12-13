@@ -16,7 +16,7 @@
 #' In addition, you can use \code{\link{make_filename}} to generate a file name
 #' more easily.
 #'
-#' @examples make_filename(2013) %>% fars_read
+#' @examples \dontrun{make_filename(2013) %>% fars_read}
 #'
 #' @importFrom readr read_csv
 #' @importFrom dplyr tbl_df
@@ -41,7 +41,7 @@ fars_read <- function(filename) {
 #' This is implemented for \code{\link{fars_read}}. You should put in a numeric;
 #' otherwise, it leads to an error.
 #'
-#' @examples make_filename(2013) #returns "accident_2013.csv.bz2"
+#' @examples \dontrun{make_filename(2013)} #returns "accident_2013.csv.bz2"
 #'
 #' @export
 make_filename <- function(year) {
@@ -60,7 +60,7 @@ make_filename <- function(year) {
 #' @return This function returns a list of data frame tables. If there are any
 #' inappropriate inputs, it leads to a warning message and returns \code{NULL}.
 #'
-#' @examples fars_read_years(c(2013, 2015))
+#' @examples \dontrun{fars_read_years(c(2013, 2015))}
 #'
 #' @importFrom dplyr mutate select
 #' @importFrom magrittr %>%
@@ -91,7 +91,7 @@ fars_read_years <- function(years) {
 #' One of the column names is "MONTH", and the others are years coerced to characters.
 #' If any element of the input vector does not match a file list, it gives you a warning message.
 #'
-#' @examples fars_summarize_years(2013:2015)
+#' @examples \dontrun{fars_summarize_years(2013:2015)}
 #'
 #' @importFrom dplyr bind_rows group_by summarize n
 #' @importFrom tidyr spread
@@ -118,7 +118,7 @@ fars_summarize_years <- function(years) {
 #'
 #' @details \code{\link{maps::map}} is utilized to draw a state map.
 #'
-#' @examples fars_map_state(1, 2013)
+#' @examples \dontrun{fars_map_state(1, 2013)}
 #'
 #' @importFrom dplyr filter
 #' @importFrom maps map
