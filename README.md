@@ -3,6 +3,8 @@
 farsCoursera
 ============
 
+[![Build Status](https://travis-ci.org/JayLKim/farsCoursera.svg?branch=master)](https://travis-ci.org/JayLKim/farsCoursera)
+
 Overview
 --------
 
