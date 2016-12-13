@@ -42,7 +42,7 @@ devtools::install_github("JayLKim/farsCoursera")
 
 ## Usage
 
-**We need to assume that we already have downloaded a data file at the current working directory.**
+__We need to assume that we already have downloaded a data file at the current working directory.__
 
 * Data import (`fars_read_years()`)
 
