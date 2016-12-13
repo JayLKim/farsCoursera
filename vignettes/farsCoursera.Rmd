@@ -62,6 +62,8 @@ month for a given year.
 
 `fars_map_state()` draws a map in which every case is represented as a dot.
 Let's assume that we want to plot every case occurred at Florida in 2013.
+(See [this link](https://en.wikipedia.org/wiki/List_of_U.S._state_abbreviations)
+for a `state.num`)
 
 ```{r "fars_map_state()", fig.height=6, fig.width=6}
 fars_map_state(state.num = 12, year = 2013)
