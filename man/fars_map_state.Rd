@@ -20,10 +20,10 @@ This function maps the locations of accidents using latitude and longitude infor
 from the FARS data files.
 }
 \details{
-\code{\link{maps::map}} is utilized to draw a state map.
+\code{maps::map} is utilized to draw a state map.
 }
 \examples{
-fars_map_state(1, 2013)
+\dontrun{fars_map_state(1, 2013)}
 
 }
 

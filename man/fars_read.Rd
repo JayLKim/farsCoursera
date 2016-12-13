@@ -28,7 +28,7 @@ In addition, you can use \code{\link{make_filename}} to generate a file name
 more easily.
 }
 \examples{
-make_filename(2013) \%>\% fars_read
+\dontrun{make_filename(2013) \%>\% fars_read}
 
 }
 

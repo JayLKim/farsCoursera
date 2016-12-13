@@ -19,7 +19,7 @@ This function summarizes a list of data frames. You can check the number of
 cases per year every month.
 }
 \examples{
-fars_summarize_years(2013:2015)
+\dontrun{fars_summarize_years(2013:2015)}
 
 }
 

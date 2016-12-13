@@ -18,7 +18,7 @@ otherwise, it leads to an error.
 This function creates an appropriate file name for a given year.
 }
 \examples{
-make_filename(2013) #returns "accident_2013.csv.bz2"
+\dontrun{make_filename(2013)} #returns "accident_2013.csv.bz2"
 
 }
 

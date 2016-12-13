@@ -19,7 +19,7 @@ Safety Administration's Fatality Analysis Reporting System, and it returns
 a list containing the data frame tables.
 }
 \examples{
-fars_read_years(c(2013, 2015))
+\dontrun{fars_read_years(c(2013, 2015))}
 
 }
 
