@@ -35,7 +35,7 @@ devtools::install_github("JayLKim/farsCoursera")
 ```
 
 ## Data Import
-Once you have downloaded data files in a current working directory, `fars_read_years()` imports the data into the global environment. To show you
+Once you have downloaded data files in a current working directory, `fars_read_years()` imports the data. To show you
 how it works, let's assume that we already have downloaded data file of 2013,
 2014, and 2015. You just need to input a vector of years; then, this function
 internally generates appropriate file names. So you don't need to be concerned
