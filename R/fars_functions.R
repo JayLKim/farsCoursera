@@ -116,7 +116,7 @@ fars_summarize_years <- function(years) {
 #' @return This function makes a plot that represents locations of accidents.
 #' If there are no matches of \code{state.num} in a data set, it results in an error.
 #'
-#' @details \code{\link{maps::map}} is utilized to draw a state map.
+#' @details \code{\link[maps]{map}} is utilized to draw a state map.
 #'
 #' @examples \dontrun{fars_map_state(1, 2013)}
 #'
